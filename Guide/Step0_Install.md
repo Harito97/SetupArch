@@ -31,11 +31,10 @@
     run script_install_first.sh
         script_install_by_pacman.sh
         script_install_by_yay.sh
-    in Guide/script_run
     or
-    just only run install command in Guide
+    just only run install command
 
 # Install GUI - Hyperland
     run script_install_DE.sh
     or
-    just only run install command in Guide
+    just only run install command

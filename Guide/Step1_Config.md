@@ -31,4 +31,6 @@
     # define what you want to do
     sudo chmod +x autostart.sh
 
-# How to config with 
+# How to config with .zshrc or .bashrc
+    # change ~/.zshrc or ~/.bashrc
+
