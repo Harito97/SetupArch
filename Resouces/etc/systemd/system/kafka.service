@@ -1,0 +1,13 @@
+[Unit]
+Description=Apache Kafka Server
+Documentation=http://kafka.apache.org/documentation.html
+Requires=zookeeper.service
+
+[Service]
+Type=simple
+Environment="JAVA_HOME=/usr/lib/jvm/java-21-openjdk"
+ExecStart=/mnt/DataK/Program/kafka/bin/kafka-server-start.sh /mnt/DataK/Program/kafka/config/server.properties
+ExecStop=/mnt/DataK/Program/kafka/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target

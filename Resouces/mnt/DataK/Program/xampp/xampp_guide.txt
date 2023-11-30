@@ -1,0 +1,88 @@
+### This process is used to install XAMPP
+[harito@archlinux XAMPP]$ sudo chmod +x xampp-linux-x64-8.2.4-0-installer.run 
+[harito@archlinux XAMPP]$ ./xampp-linux-x64-8.2.4-0-installer.run 
+[harito@archlinux XAMPP]$ sudo ./xampp-linux-x64-8.2.4-0-installer.run
+
+Output: 
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+----------------------------------------------------------------------------
+Welcome to the XAMPP Setup Wizard.
+
+----------------------------------------------------------------------------
+Select the components you want to install; clear the components you do not want 
+to install. Click Next when you are ready to continue.
+
+XAMPP Core Files [y/N] : y
+
+XAMPP Developer Files [Y/n] :n
+
+Is the selection above correct? [Y/n]: y
+
+----------------------------------------------------------------------------
+Installation Directory
+
+XAMPP will be installed to /opt/lampp
+Press [Enter] to continue: 
+
+----------------------------------------------------------------------------
+Setup is now ready to begin installing XAMPP on your computer.
+
+Do you want to continue? [Y/n]: y
+
+----------------------------------------------------------------------------
+Please wait while Setup installs XAMPP on your computer.
+
+ Installing
+ 0% ______________ 50% ______________ 100%
+ #########################################
+
+----------------------------------------------------------------------------
+Setup has finished installing XAMPP on your computer.
+
+# Seem the uninstaller can't work in the future -> becareful search to uninstall
+# Maybe delete the /opt/lampp to uninstall XAMPP
+
+### Update XAMPP in the future
+# Download the newest installer file then run it to reinstall
+
+### This process is used to configure how to run XAMPP app
+# Create a command run in /usr/sbin
+[harito@archlinux sbin]$ sudo touch xampp
+[harito@archlinux sbin]$ sudo nano xampp
+[harito@archlinux sbin]$ sudo chmod +x xampp 
+[harito@archlinux sbin]$ xampp stop
+Stopping XAMPP for Linux 8.2.4-0...
+XAMPP: Stopping Apache...ok.
+XAMPP: Stopping MySQL.../opt/lampp/lampp: line 278: hostname: command not found
+not running.
+XAMPP: Stopping ProFTPD...ok.
+[harito@archlinux sbin]$ xampp start
+Starting XAMPP for Linux 8.2.4-0...
+XAMPP: Starting Apache.../opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+egrep: warning: egrep is obsolescent; using grep -E
+/opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+egrep: warning: egrep is obsolescent; using grep -E
+ok.
+XAMPP: Starting MySQL.../opt/lampp/lampp: line 150: hostname: command not found
+/opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+egrep: warning: egrep is obsolescent; using grep -E
+ok.
+XAMPP: Starting ProFTPD.../opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
+egrep: warning: egrep is obsolescent; using grep -E
+ok.
+
+# Here is what xampp-start do - it will start or stop all default service of XAMPP
+#!/bin/bash
+
+if [ "$1" == "start" ]; then
+    sudo /opt/lampp/lampp start
+elif [ "$1" == "stop" ]; then
+    sudo /opt/lampp/lampp stop
+else
+    echo "Invalid argument. Please use 'start' or 'stop'."
+fi

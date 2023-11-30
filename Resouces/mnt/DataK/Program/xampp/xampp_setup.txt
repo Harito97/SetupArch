@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------
+Welcome to the XAMPP Setup Wizard.
+
+----------------------------------------------------------------------------
+Select the components you want to install; clear the components you do not want 
+to install. Click Next when you are ready to continue.
+
+XAMPP Core Files [y/N] : y
+
+XAMPP Developer Files [Y/n] :n
+
+Is the selection above correct? [Y/n]: y
+
+----------------------------------------------------------------------------
+Installation Directory
+
+XAMPP will be installed to /opt/lampp
+Press [Enter] to continue:
+
+----------------------------------------------------------------------------
+Setup is now ready to begin installing XAMPP on your computer.
+
+Do you want to continue? [Y/n]: y
+
+----------------------------------------------------------------------------
+Please wait while Setup installs XAMPP on your computer.
+
+ Installing
+ 0% ______________ 50% ______________ 100%
+ #########################################
+
+----------------------------------------------------------------------------
+Setup has finished installing XAMPP on your computer.

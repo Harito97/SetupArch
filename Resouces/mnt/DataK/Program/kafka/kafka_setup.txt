@@ -1,0 +1,15 @@
+Reference:
+https://www.linuxtechi.com/how-to-install-apache-kafka-on-ubuntu/
+
+If want uninstall kafka
+	|___Step1: sudo rm -rf /mnt/DataK/Program/kafka
+	|___Step2: sudo rm /etc/systemd/system/zookeeper.service
+	|___Step3: sudo rm /etc/systemd/system/kafka.service
+
+If wat update kafka
+	|___update new realse in folder /mnt/DataK/Program/kafka
+	|___# may don't need - update /etc/systemd/system/zookeeper.service (start quickly zookeeper)
+	|___# may don't need - update /etc/systemd/system/kafka.service (start quickly kafka)
+
+* Now i install in /mnt/DataK/Program/kafka
+
