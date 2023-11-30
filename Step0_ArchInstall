@@ -17,7 +17,7 @@ Step 2: Setup use ArchLinux
             |___root password	                set a root password 
             |___user account	                create an account with id and password to login to arch system (mark it has root permission) 
             |___Profile (Desktop GUI)           Minimal (I want to setup later) 
-            |___Audio                           Pipewire 
+            |___Audio                           Pirewire 
             |___Kernels                         linux (I just want linux) 
             |___Additional package              sudo, vim, nano, git 
             |___Network configuration           Network Manager (lazy to setup network so chose this)

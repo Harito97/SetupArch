@@ -1,0 +1,9 @@
+Setup git
+    |___❯ git config --global user.email "..." 
+    |___❯ git config --global user.name "..." 
+
+Install
+    |___❯ sudo pacman -S firefox kitty ntfs-3g             # for browser and terminal shell and package help read ntfs partition (of Windows)
+    |___❯ sudo pacman -S python jdk-openjdk                # for latest python and java version on arch repository
+    |___❯ sudo pacman -S gnome                             # base packages for app's gnome and gnome shell environment - most app still just work perfect on this environment
+    |___❯ use git clone https://github.com/prasanthrangan/hyprdots - the Hyprland GUI we will use. then use ./install.sh to auto install. this will install a lot of packages - some of them will not be use - i try searching to setup and install needed package only
