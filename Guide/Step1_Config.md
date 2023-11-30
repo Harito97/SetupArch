@@ -3,6 +3,9 @@
     git config --global user.email "..." 
     git config --global user.name "..." 
 
+# Config virtual python environment
+    python -m venv ~/venv/py
+    
 # How to auto mount a partition when boot
     # get more info in folder Resource: /etc/fstab
     sudo vim /etc/fstab
