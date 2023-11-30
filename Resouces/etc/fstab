@@ -1,0 +1,21 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sda2
+UUID=4ecd553e-d4d9-41a6-904e-ceaf4d4d1bf2	/         	ext4      	rw,relatime	0 1
+
+# /dev/sda1
+UUID=DEE4-9A7F      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda3
+UUID=79388C5C54067FA1	/mnt/DataS	ntfs		rw,relatime	0 2
+
+# /dev/sdb2
+UUID=0E3A84943A847B0B	/mnt/Win11	ntfs		rw,relatime	0 2
+
+# /dev/sdb3
+UUID=7C04F55E291B21A9	/mnt/DataK	ntfs		rw,relatime	0 2
+
+# /dev/mmcblk0p1
+UUID=CEF2-9903		/mnt/SD		exfat		rw,relatime	0 2

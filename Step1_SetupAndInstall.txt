@@ -1,6 +1,4 @@
-Setup git
-    |___❯ git config --global user.email "..." 
-    |___❯ git config --global user.name "..." 
+
 
 Install
     |___❯ sudo pacman -S firefox kitty ntfs-3g             # for browser and terminal shell and package help read ntfs partition (of Windows)

@@ -28,13 +28,20 @@
     reboot 
 
 # Install packages
-    sudo pacman -S firefox kitty ntfs-3g            # for browser and terminal shell and package help read ntfs partition (of Windows) 
+    sudo pacman -S firefox kitty ntfs-3g             # for browser and terminal shell and package help read ntfs partition (of Windows) 
     sudo pacman -S python jdk-openjdk               # for latest python and java version on arch repository 
     sudo pacman -S gnome                            # base packages for app's gnome and gnome shell environment - most app still just work perfect on this environment 
 
-    # other packages
-    sudo pacman -S 
-    
+    # other packages for my demand
+    sudo pacman -S obs-studio                  # record 
+    sudo pacman -S vlc                         # play audio, video
+    sudo pacman -S gdb                         # debug and run program eg: C, C++
+
+    yay -S drawio-desktop-bin          # draw graph, plan, ...
+    yay -S crow-translate              # translate app
+    yay -S kdeconnect-git              # kde connect laptop and phone
+    yay -S grub-customizer             # custom grub eg: remove entry that don't need
+
 # Install GUI - Hyperland
     git clone https://github.com/prasanthrangan/hyprdots        # the Hyprland GUI we will use
     cd folder
