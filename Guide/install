@@ -1,0 +1,24 @@
+# Remember you shouldn't run this script 
+# Because script will run all as the same time
+# No matter the previous script done
+# The next command will run 
+
+# So read this script just to know step by step 
+# about the way i install all of this
+
+# install needed package fisrt
+./script_run/script_install_first.sh
+sleep 10m
+
+# install Hyprland GUI - the Desktop environment that i use
+./script_run/script_install_DE.sh 
+# this will install AUR helper - yay and paru
+sleep 20m
+
+
+# install app that we want
+./script_run/script_install_by_pacman.sh
+sleep 5m
+
+./script_run/script_install_by_yay.sh 
+

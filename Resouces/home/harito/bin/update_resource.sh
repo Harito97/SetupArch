@@ -7,10 +7,6 @@ cd /mnt/DataK/Project/SetupArch/Resouces
 sudo cp update_resource.sh ~/bin/
 # update this command in my bin
 
-# ---------------------------
-# Don't change the code above
-# ---------------------------
-
 sudo cp ~/.zshrc ./home/harito/
 # update ~/.zshrc - the setup for my favourite shell
 
