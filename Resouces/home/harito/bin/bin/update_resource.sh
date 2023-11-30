@@ -23,6 +23,9 @@ sudo cp /etc/profile.d/autostart.sh etc/profile.d/autostart.sh
 sudo cp /etc/fstab etc/fstab
 # update setup auto mount partitions when boot
 
+sudo cp /etc/pacman.d/mirrorlist etc/pacman.d/mirrorlist
+# config mirror to download need package - some package don't have on other repository
+
 sudo cp -rf ~/bin home/harito/bin
 # update folder has my custom command
 
