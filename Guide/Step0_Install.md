@@ -1,7 +1,7 @@
 # Install Arch
-## Step 0: Have a boot USB about Arch Linux (should have latest Arch ISO version)
-## Step 1: Already have partition (/boot and /) prepared (use tool)
-## Step 2: Start install
+#### Step 0: Have a boot USB about Arch Linux (should have latest Arch ISO version)
+#### Step 1: Already have partition (/boot and /) prepared (use tool)
+#### Step 2: Start install
         |___Command: archinstall \
         |___Config: \
                 |___Keyboard, layout and locale     Default \
@@ -24,7 +24,7 @@
                 |___Network configuration           Network Manager (lazy to setup network so chose this) \
                 |___Timezone                        Ho_Chi_Minh (UTC+7) \
                 |___Others                          Make default \
-## Step 3: Wait then chose not stay live mode USB. reboot 
+#### Step 3: Wait then chose not stay live mode USB. reboot 
 
 # Install packages
     sudo pacman -S firefox kitty ntfs-3g            # for browser and terminal shell and package help read ntfs partition (of Windows) 
