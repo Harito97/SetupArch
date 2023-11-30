@@ -17,20 +17,24 @@
                 |___hostname                        change it to something you like (Eg: archlinux)
                 |___root password                   set a root password
                 |___user account                    create an account with id and password to login to arch system (mark it root permission)
-                |___Profile (Desktop GUI)*          Minimal (I want to setup later)
+                |___Profile (Desktop GUI)*           Minimal (I want to setup later)
                 |___Audio*                          Pirewire
                 |___Kernels                         linux (I just want linux)
                 |___Additional package*             sudo, vim, nano, git
-                |___Network configuration           Network Manager (lazy to setup network so chose this)
+                |___Network configuration*           Network Manager (lazy to setup network so chose this)
                 |___Timezone                        Ho_Chi_Minh (UTC+7)
                 |___Others                          Make default
-#### Step 3: Wait then chose not stay live mode USB. reboot 
+#### Step 3: Wait then chose not stay live mode USB. 
+    reboot 
 
 # Install packages
     sudo pacman -S firefox kitty ntfs-3g            # for browser and terminal shell and package help read ntfs partition (of Windows) 
     sudo pacman -S python jdk-openjdk               # for latest python and java version on arch repository 
     sudo pacman -S gnome                            # base packages for app's gnome and gnome shell environment - most app still just work perfect on this environment 
 
+    # other packages
+    sudo pacman -S 
+    
 # Install GUI - Hyperland
     git clone https://github.com/prasanthrangan/hyprdots        # the Hyprland GUI we will use
     cd folder
