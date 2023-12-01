@@ -37,3 +37,7 @@
 # How to config with .zshrc or .bashrc
     # change ~/.zshrc or ~/.bashrc
 
+# How to link a file/folder to a file/folder
+    ln -s /mnt/DataK/Music ~/Music
+    # here ~/Music will link to /mnt/DataK/Music
+
