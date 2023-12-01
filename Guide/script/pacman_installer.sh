@@ -8,3 +8,8 @@ sudo pacman -S libxcb
 # package help Qt get xcb library
 sudo pacman -S qt5-connectivity
 # package help connection for kde connect
+sudo pacman -S npm
+# install npm setup for nodejs, reactjs
+sudo npm -g install create-react-app
+# use npm to install create react app
+
