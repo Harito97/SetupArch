@@ -14,3 +14,5 @@ sudo npm -g install create-react-app
 # use npm to install create react app
 sudo pacman -S p7zip
 # tool to extract and read many compact file
+sudo pacman -S opencv
+# opencv use for c++

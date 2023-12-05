@@ -8,4 +8,5 @@ yay -S grub-customizer
 # custom grub eg: remove entry that don't need
 yay -S cpp-httplib
 # cpp library for http request
-
+yay -S google-chrome
+# the brower from google
