@@ -16,3 +16,5 @@ sudo pacman -S p7zip
 # tool to extract and read many compact file
 sudo pacman -S opencv
 # opencv use for c++
+sudo pacman -S rapidjson
+# json library use for c++

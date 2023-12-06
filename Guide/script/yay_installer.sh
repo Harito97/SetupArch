@@ -10,3 +10,6 @@ yay -S cpp-httplib
 # cpp library for http request
 yay -S google-chrome
 # the brower from google
+yay -S mongodb-bin
+# setup mongodb on archlinux
+# setup mongodb and active it's service follow this guide: https://www.geeksforgeeks.org/how-to-install-mongodb-on-arch-based-linux-distributionsmanjaro/
