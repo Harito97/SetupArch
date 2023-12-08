@@ -13,3 +13,5 @@ yay -S google-chrome
 yay -S mongodb-bin
 # setup mongodb on archlinux
 # setup mongodb and active it's service follow this guide: https://www.geeksforgeeks.org/how-to-install-mongodb-on-arch-based-linux-distributionsmanjaro/
+yay -S wps-office
+# setup wps office

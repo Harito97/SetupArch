@@ -18,3 +18,7 @@ sudo pacman -S opencv
 # opencv use for c++
 sudo pacman -S rapidjson
 # json library use for c++
+sudo pacman -S ibus
+# ibus 
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo/master/archlinux/install.sh)"
+# download with ibus bamboo
