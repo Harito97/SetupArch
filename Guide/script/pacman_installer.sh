@@ -22,3 +22,6 @@ sudo pacman -S ibus
 # ibus 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo/master/archlinux/install.sh)"
 # download with ibus bamboo
+sudo pacman -S libxcrypt-compat
+# lib for app only run on 32 bit. Eg: xampp, ...
+
