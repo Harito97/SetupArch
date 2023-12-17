@@ -14,6 +14,10 @@ cd /mnt/DataK/Project/SetupArch/Resouces
 sudo cp ~/.zshrc ./home/harito/
 # update ~/.zshrc - the setup for my favourite shell
 
+### Keyboard enviroment setup
+sudo cp /etc/environment etc/environment
+# set keyboard environment whern start
+
 ### Grub setup
 sudo cp /etc/default/grub etc/default/grub
 # update config grub

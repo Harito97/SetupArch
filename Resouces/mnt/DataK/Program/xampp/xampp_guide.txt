@@ -51,17 +51,17 @@ Setup has finished installing XAMPP on your computer.
 # Download the newest installer file then run it to reinstall
 
 ### This process is used to configure how to run XAMPP app
-# Create a command run in ~/bin
-[harito@archlinux bin]$ sudo touch xampp
-[harito@archlinux bin]$ sudo nano xampp
-[harito@archlinux bin]$ sudo chmod +x xampp 
-[harito@archlinux bin]$ xampp stop
+# Create a command run in /usr/sbin
+[harito@archlinux sbin]$ sudo touch xampp
+[harito@archlinux sbin]$ sudo nano xampp
+[harito@archlinux sbin]$ sudo chmod +x xampp 
+[harito@archlinux sbin]$ xampp stop
 Stopping XAMPP for Linux 8.2.4-0...
 XAMPP: Stopping Apache...ok.
 XAMPP: Stopping MySQL.../opt/lampp/lampp: line 278: hostname: command not found
 not running.
 XAMPP: Stopping ProFTPD...ok.
-[harito@archlinux bin]$ xampp start
+[harito@archlinux sbin]$ xampp start
 Starting XAMPP for Linux 8.2.4-0...
 XAMPP: Starting Apache.../opt/lampp/share/xampp/xampplib: line 22: netstat: command not found
 egrep: warning: egrep is obsolescent; using grep -E

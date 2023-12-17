@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$1" == "start" ]; then
+    sudo /opt/lampp/lampp start
+elif [ "$1" == "stop" ]; then
+    sudo /opt/lampp/lampp stop
+else
+    echo "Invalid argument. Please use 'start' or 'stop'."
+fi
