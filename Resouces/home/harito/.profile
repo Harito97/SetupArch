@@ -1,0 +1,2 @@
+Hyprland
+ibus-daemon -rxRd

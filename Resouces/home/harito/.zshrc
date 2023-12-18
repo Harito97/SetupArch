@@ -6,16 +6,16 @@
 export PATH="$PATH:/home/harito/bin"
 
 # Export Ibus for ArchLinux with Hyprland
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+# export GTK_IM_MODULE=ibus
+# export XMODIFIERS=@im=ibus
+# export QT_IM_MODULE=ibus
+# ibus-daemon -rxRd
 
 # Export setup for GUI environment with Hyprland - configed in ~/.config/hypr/hyprland.conf
 
 ## Toolkit Backend Variables
 # export GDK_BACKEND=x11						# GTK: Use wayland if available, fall back to x11 if not.
 # export QT_QPA_PLATFORM="xcb"					# Tell Qt applications to use the Wayland backend, and fall back to x11 if Wayland is unavailable
-# QT_QPA_PLATFORM="xcb"
 # export SDL_VIDEODRIVER=wayland				# Run SDL2 applications on Wayland. Remove or set to x11 if games that provide older versions of SDL cause compatibility issues
 # export CLUTTER_BACKEND=wayland				# Clutter package already has wayland enabled, this variable will force Clutter applications to try and use the Wayland backend
 
