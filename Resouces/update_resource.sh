@@ -14,8 +14,15 @@ cd /mnt/DataK/Project/SetupArch/Resouces
 sudo cp ~/.zshrc ./home/harito/
 # update ~/.zshrc - the setup for my favourite shell
 
-sudo cp ~/.profile ./home/harito/
+# sudo cp ~/.profile ./home/harito/
 # command will run auto when login
+
+### Hyprland config
+sudo cp ~/.config/hypr/hyprland.conf ./home/harito/.config/hypr/hyprland.conf
+sudo cp ~/.config/hypr/animations.conf ./home/harito/.config/hypr/animations.conf
+sudo cp ~/.config/hypr/keybindings.conf ./home/harito/.config/hypr/keybindings.conf
+# set shortcut for Bamboo: mainMod + return, BambooUs: mainMod + space
+sudo cp ~/.config/hypr/windowrules.conf ./home/harito/.config/hypr/windowrules.conf
 
 ### Keyboard enviroment setup
 sudo cp /etc/environment ./etc/environment
