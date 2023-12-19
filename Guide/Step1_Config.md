@@ -41,3 +41,6 @@
     ln -s /mnt/DataK/Music ~/Music
     # here ~/Music will link to /mnt/DataK/Music
 
+# Why partitions (ntfs) mounted by Linux can only read
+    because Windows update some package and make power mode is fast mode -> that take control permission
+    solution is disable fast mode of Windows and should be every update of Windows 
