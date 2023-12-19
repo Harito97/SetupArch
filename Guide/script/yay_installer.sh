@@ -15,3 +15,5 @@ yay -S mongodb-bin
 # setup mongodb and active it's service follow this guide: https://www.geeksforgeeks.org/how-to-install-mongodb-on-arch-based-linux-distributionsmanjaro/
 yay -S wps-office
 # setup wps office
+yay -S ibus-autostart
+# build a entry that auto start ibus service when login
