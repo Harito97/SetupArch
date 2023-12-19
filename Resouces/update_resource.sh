@@ -33,8 +33,7 @@ sudo cp /etc/default/grub ./etc/default/grub
 # update config grub
 
 ### Login setup
-sudo cp /etc/profile.d/start-hyprland.sh ./etc/profile.d/start-hyprland.sh
-sudo cp /etc/profile.d/start-ibus.sh ./etc/profile.d/start-ibus.sh
+sudo cp /etc/profile.d/autostart.sh ./etc/profile.d/autostart.sh
 # update autostart when login script
 
 ### Mount setup
