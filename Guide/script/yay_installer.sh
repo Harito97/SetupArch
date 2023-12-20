@@ -17,3 +17,5 @@ yay -S wps-office
 # setup wps office
 yay -S ibus-autostart
 # build a entry that auto start ibus service when login
+yay -S weather
+# weather app
