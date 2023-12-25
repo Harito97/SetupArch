@@ -24,4 +24,5 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo
 # download with ibus bamboo
 sudo pacman -S libxcrypt-compat
 # lib for app only run on 32 bit. Eg: xampp, ...
+sudo pacman -S htop
 

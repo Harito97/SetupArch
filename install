@@ -7,18 +7,18 @@
 # about the way i install all of this
 
 # install needed package fisrt
-./Guide/script/install_first.sh
+./script/install_first.sh
 sleep 10m
 
 # install Hyprland GUI - the Desktop environment that i use
-./Guide/script/install_DE.sh 
+./script/install_DE.sh 
 # this will install AUR helper - yay and paru
 sleep 20m
 
 
 # install app that we want
-./Guide/script/pacman_installer.sh
+./script/pacman_installer.sh
 sleep 5m
 
-./Guide/script/yay_installer.sh 
+./script/yay_installer.sh 
 
