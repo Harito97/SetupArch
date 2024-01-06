@@ -21,3 +21,5 @@ yay -S weather
 # weather app
 yay -S wtfutil-bin 
 # show dashbar info 
+yay -S tgpt-bin
+# use gpt from the terminal 
