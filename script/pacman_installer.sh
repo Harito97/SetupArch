@@ -25,4 +25,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo
 sudo pacman -S libxcrypt-compat
 # lib for app only run on 32 bit. Eg: xampp, ...
 sudo pacman -S htop
+# infor about processes run on system 
+sudo pacman -S usbutils
+# infor about usb connect on system 
+sudo pacman -S pciutils
+# infor about pci devices connect on system 
+sudo pacman -S dmidecode
+# infors about RAM, BIOS and many more ...
+
 

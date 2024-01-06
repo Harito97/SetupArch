@@ -44,3 +44,14 @@
 # Why partitions (ntfs) mounted by Linux can only read
     because Windows update some package and make power mode is fast mode -> that take control permission
     solution is disable fast mode of Windows and should be every update of Windows 
+
+# How to get system info 
+    lslbk           # for disk info
+    lscpu           # for cpu info
+    lsusb           # for usb connect info
+    lspci           # for pci devices connect info
+    free -m         # for ram memory info
+    sudo dmidecode -t memory
+    sudo dmidecode -t bios      # for bios info 
+    sudo dmidecode -t system    # for system info
+    

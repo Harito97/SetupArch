@@ -19,3 +19,5 @@ yay -S ibus-autostart
 # build a entry that auto start ibus service when login
 yay -S weather
 # weather app
+yay -S wtfutil-bin 
+# show dashbar info 

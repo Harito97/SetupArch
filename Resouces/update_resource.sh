@@ -13,7 +13,6 @@ cd /mnt/DataK/Project/SetupArch/Resouces
 ### User custom setup
 sudo cp ~/.zshrc ./home/harito/
 # update ~/.zshrc - the setup for my favourite shell
-
 # sudo cp ~/.profile ./home/harito/
 # command will run auto when login
 
@@ -26,7 +25,7 @@ sudo cp ~/.config/hypr/windowrules.conf ./home/harito/.config/hypr/windowrules.c
 
 ### Keyboard enviroment setup
 sudo cp /etc/environment ./etc/environment
-# set keyboard environment whern start
+# set keyboard environment when start - importance when setting ibus in Arch 
 
 ### Grub setup
 sudo cp /etc/default/grub ./etc/default/grub
@@ -47,7 +46,6 @@ sudo cp /etc/pacman.d/mirrorlist ./etc/pacman.d/mirrorlist
 ### System service setup
 sudo cp /etc/systemd/system/zookeeper.service ./etc/systemd/system/zookeeper.service
 # service start zookeeper
-
 sudo cp /etc/systemd/system/kafka.service ./etc/systemd/system/kafka.service
 # service start kafka
 
