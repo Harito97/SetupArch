@@ -23,3 +23,6 @@ yay -S wtfutil-bin
 # show dashbar info 
 yay -S tgpt-bin
 # use gpt from the terminal 
+yay -S calcure
+# calendar app derectly in terminal shell
+ 

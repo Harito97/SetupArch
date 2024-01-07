@@ -32,5 +32,7 @@ sudo pacman -S pciutils
 # infor about pci devices connect on system 
 sudo pacman -S dmidecode
 # infors about RAM, BIOS and many more ...
+sudo pacman -S libreoffice-fresh
+# office app for Linux 
 
 
