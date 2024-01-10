@@ -25,4 +25,6 @@ yay -S tgpt-bin
 # use gpt from the terminal 
 yay -S calcure
 # calendar app derectly in terminal shell
- 
+yay -S tenacity-bin 
+# An easy-to-use multi-track audio editor and recorder, forked from Audacity
+
