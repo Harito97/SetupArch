@@ -26,5 +26,7 @@ yay -S tgpt-bin
 yay -S calcure
 # calendar app derectly in terminal shell
 yay -S tenacity-bin 
-# An easy-to-use multi-track audio editor and recorder, forked from Audacity
+# an easy-to-use multi-track audio editor and recorder, forked from Audacity
+yay -S ultimate-tic-tac-toe    
+# a python app for tic tac toe game 
 
