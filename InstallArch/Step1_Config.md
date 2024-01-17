@@ -55,3 +55,23 @@
     sudo dmidecode -t bios      # for bios info 
     sudo dmidecode -t system    # for system info
     
+# How to virtual macOS on Linux but with high performance 
+    sudo pacman - S docker              # use docker
+    
+    sudo systemctl start docker         # start docker service 
+    sudo systemctl enable docker
+    
+    sudo usermod -aG docker username    # add current user to docker group
+    killall Hyprland                    # <=> logout in current my system setup
+    
+    sudo pacman -S qemu libvirt dnsmasq # add needed package 
+    sudo pacman -S virt-manager bridge-utils flex bison iptables-nft edk2-ovmf 
+
+    sudo systemctl enable --now libvirtd    # start libvirt and load kvm module 
+    sudo systemctl enable --now virtlogd
+    echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs
+    sudo modprobe kvm
+
+    docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPALY=${DISPLAY:-:0.0}" sickcodes/docker-osx:mojave      # clean install macOS Mojave
+
+    

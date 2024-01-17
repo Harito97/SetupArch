@@ -38,4 +38,7 @@ sudo pacman -S tk
 # set python use tk 
 sudo pacman -S gnome-tweaks 
 # gnome tweaks config gnome UI app and gnome shell
+sudo pacman -S xdg-desktop-portal-kde
+# add x11 server for kde 
+sudo pacman -S docker
 

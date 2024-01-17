@@ -29,4 +29,8 @@ yay -S tenacity-bin
 # an easy-to-use multi-track audio editor and recorder, forked from Audacity
 yay -S ultimate-tic-tac-toe    
 # a python app for tic tac toe game 
+yay -S scratch3-bin
+# scratch app in desktop to use 
+yay -S virtualbox-bin 
+# vitural box in linux 
 
