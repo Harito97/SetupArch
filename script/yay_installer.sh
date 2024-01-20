@@ -31,6 +31,6 @@ yay -S ultimate-tic-tac-toe
 # a python app for tic tac toe game 
 yay -S scratch3-bin
 # scratch app in desktop to use 
-yay -S virtualbox-bin 
-# vitural box in linux 
+yay -S todotxt 
+# todo app in terminal 
 

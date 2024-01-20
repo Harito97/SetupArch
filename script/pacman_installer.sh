@@ -41,4 +41,5 @@ sudo pacman -S gnome-tweaks
 sudo pacman -S xdg-desktop-portal-kde
 # add x11 server for kde 
 sudo pacman -S docker
+# docker for linux
 

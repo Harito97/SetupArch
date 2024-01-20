@@ -56,12 +56,12 @@
     sudo dmidecode -t system    # for system info
     
 # How to virtual macOS on Linux but with high performance 
-    sudo pacman - S docker              # use docker
+    sudo pacman -S docker              # use docker
     
     sudo systemctl start docker         # start docker service 
     sudo systemctl enable docker
     
-    sudo usermod -aG docker username    # add current user to docker group
+    sudo usermod -aG docker harito      # add current user to docker group
     killall Hyprland                    # <=> logout in current my system setup
     
     sudo pacman -S qemu libvirt dnsmasq # add needed package 
@@ -72,6 +72,11 @@
     echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs
     sudo modprobe kvm
 
-    docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPALY=${DISPLAY:-:0.0}" sickcodes/docker-osx:mojave      # clean install macOS Mojave
+    docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPALY=${DISPLAY:-:0.0}" sickcodes/docker-osx:ventura      # clean install macOS 13 Ventura 
+    
+# How to config a shorter name for app by command terminal
+    ln -s /usr/bin/todo.sh /home/harito/bin/todo       # here is a example how i make a link from user bin command to my harito's bin command 
+
+
 
     
