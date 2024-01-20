@@ -5,6 +5,9 @@
 # Export PATH to harito's bin
 export PATH="$PATH:/home/harito/bin"
 
+# Export locale use for UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Export Ibus for ArchLinux with Hyprland
 # export GTK_IM_MODULE=ibus
 # export XMODIFIERS=@im=ibus

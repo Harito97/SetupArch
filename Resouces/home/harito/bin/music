@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cvlc -I ncurses ~/Music/   # the music folder you want
+
+

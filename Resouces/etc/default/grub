@@ -1,7 +1,7 @@
 # GRUB boot loader configuration
 
 GRUB_DEFAULT="saved"
-GRUB_TIMEOUT="1"
+GRUB_TIMEOUT="3"
 GRUB_DISTRIBUTOR="Arch"
 # GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
@@ -40,12 +40,12 @@ GRUB_DISABLE_RECOVERY="true"
 
 # Uncomment and set to the desired menu colors.  Used by normal and wallpaper
 # modes only.  Entries specified as foreground/background.
-#GRUB_COLOR_NORMAL="light-blue/black"
-#GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
+export GRUB_COLOR_NORMAL="light-green/black"
+export GRUB_COLOR_HIGHLIGHT="cyan/black"
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
 #GRUB_BACKGROUND="/path/to/wallpaper"
-#GRUB_THEME="/usr/share/grub/themes/pochita/theme.txt"
+#GRUB_THEME="/boot/grub/themes/starfield/theme.txt"
 
 # Uncomment to get a beep at GRUB start
 #GRUB_INIT_TUNE="480 440 1"
