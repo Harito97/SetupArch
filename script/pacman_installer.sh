@@ -42,4 +42,9 @@ sudo pacman -S xdg-desktop-portal-kde
 # add x11 server for kde 
 sudo pacman -S docker
 # docker for linux
+sudo pacman -S pdftk     
+# tool utils for pdf file
+sudo pacman -S texlive
+# latex use local 
+
 

@@ -33,4 +33,5 @@ yay -S scratch3-bin
 # scratch app in desktop to use 
 yay -S todotxt 
 # todo app in terminal 
-
+yay -S rstudio-desktop-bin 
+# rstudio desktop package 
