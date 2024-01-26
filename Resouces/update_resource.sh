@@ -23,6 +23,9 @@ sudo cp ~/.config/hypr/keybindings.conf ./home/harito/.config/hypr/keybindings.c
 # set shortcut for Bamboo: mainMod + return, BambooUs: mainMod + space
 sudo cp ~/.config/hypr/windowrules.conf ./home/harito/.config/hypr/windowrules.conf
 
+### Neofetch config 
+sudo cp -r ~/.config/neofetch ./home/harito/.config
+
 ### Keyboard enviroment setup
 sudo cp /etc/environment ./etc/environment
 # set keyboard environment when start - importance when setting ibus in Arch 

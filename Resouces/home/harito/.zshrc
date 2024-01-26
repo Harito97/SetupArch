@@ -8,6 +8,10 @@ export PATH="$PATH:/home/harito/bin"
 # Export locale use for UTF-8
 export LC_ALL=en_US.UTF-8
 
+# Export variable env for Latex tools
+# export TEXMFDIST=/usr/share/texmf-dist
+# export TEXMFLOCAL=/usr/local/share/texmf:/usr/share/texmf
+
 # Export Ibus for ArchLinux with Hyprland
 # export GTK_IM_MODULE=ibus
 # export XMODIFIERS=@im=ibus
@@ -31,6 +35,7 @@ export LC_ALL=en_US.UTF-8
 # export QT_AUTO_SCREEN_SCALE_FACTOR=1			# (From the Qt documentation) enables automatic scaling, based on the monitor’s pixel density
 # export QT_WAYLAND_DISABLE_WINDOWDECORATION=1		# Disables window decorations on Qt applications
 # export QT_QPA_PLATFORMTHEME=qt5ct			# Tells Qt based applications to pick your theme from qt5ct, use with Kvantum.
+export QT_QPA_PLATFORMTHEME=qt5ct 
 
 # ------------------------------------------------
 # After this is default setup - can custom if free

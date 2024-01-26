@@ -46,5 +46,7 @@ sudo pacman -S pdftk
 # tool utils for pdf file
 sudo pacman -S texlive
 # latex use local 
+sudo pacman -S neofetch
+# display common information on terminal shell
 
 
