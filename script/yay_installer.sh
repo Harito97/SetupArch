@@ -13,6 +13,19 @@ yay -S mongodb-bin
 # setup mongodb and active it's service follow this guide: https://www.geeksforgeeks.org/how-to-install-mongodb-on-arch-based-linux-distributionsmanjaro/
 yay -S wps-office
 # setup wps office
+# Optional dependencies for wps-office
+#     libtiff5: Provide libtiff.so.5 for wpspdf working
+#     cups: for printing support
+#     libjpeg-turbo: JPEG image codec support [installed]
+#     pango: for complex (right-to-left) text support [installed]
+#     curl: An URL retrieval utility and library [installed]
+#     ttf-wps-fonts: Symbol fonts required by wps-office
+#     ttf-ms-fonts: Microsft Fonts recommended for wps-office
+#     wps-office-fonts: FZ TTF fonts provided by wps community
+#     wps-office-mime: Use mime files provided by Kingsoft
+#     wps-office-mui-zh-cn: zh_CN support for WPS Office
+yay -S libtiff5 cups ttf-ms-fonts ttf-wps-fonts wps-office-fonts wps-office-mime wps-office-mui-zh-cn
+# optional packages eg: font, ... for wps office
 yay -S ibus-autostart
 # build a entry that auto start ibus service when login
 yay -S weather

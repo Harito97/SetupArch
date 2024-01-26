@@ -36,10 +36,6 @@ sudo pacman -S libreoffice-fresh
 # office app for Linux 
 sudo pacman -S tk
 # set python use tk 
-sudo pacman -S gnome-tweaks 
-# gnome tweaks config gnome UI app and gnome shell
-sudo pacman -S xdg-desktop-portal-kde
-# add x11 server for kde 
 sudo pacman -S docker
 # docker for linux
 sudo pacman -S pdftk     
@@ -48,5 +44,6 @@ sudo pacman -S texlive
 # latex use local 
 sudo pacman -S neofetch
 # display common information on terminal shell
-
+sudo pacman -S man-pages-vi
+# man page document - also have some dependence eg: man-db, ...
 

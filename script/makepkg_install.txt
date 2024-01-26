@@ -1,0 +1,13 @@
+### Install Snap: https://snapcraft.io/docs/installing-snap-on-arch-linux
+
+'''bash
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+
+sudo systemctl enable --now snapd.socket        # Created symlink /etc/systemd/system/sockets.target.wants/snapd.socket → /usr/lib/systemd/system/snapd.socket.
+sudo ln -s /var/lib/snapd/snap /snap            
+sudo systemctl enable --now snapd.apparmor      # Created symlink /etc/systemd/system/multi-user.target.wants/snapd.apparmor.service → /usr/lib/systemd/system/snapd.apparmor.service.
+'''
+
+

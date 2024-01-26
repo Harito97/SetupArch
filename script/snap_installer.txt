@@ -1,0 +1,2 @@
+sudo snap install wps-office
+# wps-office - hope that it works better with the package of aur
