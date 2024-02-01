@@ -77,6 +77,29 @@
 # How to config a shorter name for app by command terminal
     ln -s /usr/bin/todo.sh /home/harito/bin/todo       # here is a example how i make a link from user bin command to my harito's bin command 
 
+# What is the difference between 'Liên kết cứng' & 'Liên kết mềm'
+    Trong hệ điều hành Linux, liên kết cứng (hard links) và liên kết mềm (symbolic links hay soft links) đều là các cách để tạo mối liên    kết giữa các tệp tin hoặc thư mục. Dưới đây là những sự khác biệt cơ bản giữa chúng:
 
+    1. **Đối tượng Liên kết:**
+       - **Liên kết cứng:** Nếu tạo một liên kết cứng, hai hoặc nhiều tên tệp sẽ trỏ đến cùng một inode (vùng lưu trữ dữ liệu và thông tin về tệp).
+       - **Liên kết mềm:** Liên kết mềm tạo ra một tệp đặc biệt, trong đó nó chỉ chứa đường dẫn tuyệt đối hoặc tương đối đến tệp hoặc thư mục khác.
+
+    2. **Quá trình Xóa:**
+       - **Liên kết cứng:** Khi bạn xóa một liên kết cứng, inode của tệp không bị xóa cho đến khi tất cả các liên kết cứng đều đã bị xóa.   Inode chỉ được giải phóng khi không còn liên kết nào trỏ đến nó.
+       - **Liên kết mềm:** Khi bạn xóa một liên kết mềm, nó không ảnh hưởng đến tệp hoặc thư mục gốc mà nó trỏ đến.
+
+    3. **Dung lượng Đĩa:**
+       - **Liên kết cứng:** Các liên kết cứng không tạo ra sự tăng dung lượng đĩa vì chúng chỉ trỏ đến cùng một inode.
+       - **Liên kết mềm:** Liên kết mềm tạo ra một tệp đặc biệt, nó sẽ chiếm một khoảng dung lượng nhỏ trên đĩa để lưu trữ đường dẫn đến tệp hay thư mục gốc.
+
+    4. **Cross-filesystem Links:**
+       - **Liên kết cứng:** Chúng không thể tạo liên kết cứng qua các hệ thống tệp tin khác nhau.
+       - **Liên kết mềm:** Liên kết mềm có thể trỏ đến các tệp và thư mục ở các hệ thống tệp tin khác nhau.
+
+    5. **Sự Thay Đổi Động:**
+       - **Liên kết cứng:** Thay đổi tên của một liên kết cứng sẽ không ảnh hưởng đến dữ liệu của tệp.
+       - **Liên kết mềm:** Nếu bạn thay đổi tên của liên kết mềm, nó sẽ không thể tìm thấy tệp hoặc thư mục gốc nếu đường dẫn mới không còn hợp lệ.
+
+    Tóm lại, liên kết cứng liên kết trực tiếp đến inode và không thể trỏ tới các hệ thống tệp tin khác, trong khi liên kết mềm tạo ra một tệp đặc biệt và có thể trỏ tới các đối tượng ở mọi nơi trên hệ thống tệp tin.
 
     

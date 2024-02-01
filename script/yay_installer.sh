@@ -38,11 +38,11 @@ yay -S calcure
 # calendar app derectly in terminal shell
 yay -S tenacity-bin 
 # an easy-to-use multi-track audio editor and recorder, forked from Audacity
-yay -S ultimate-tic-tac-toe    
-# a python app for tic tac toe game 
 yay -S scratch3-bin
 # scratch app in desktop to use 
 yay -S todotxt 
 # todo app in terminal 
 yay -S rstudio-desktop-bin 
 # rstudio desktop package 
+# yay -S zed-editor
+# new editor faster than vscode 
