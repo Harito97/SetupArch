@@ -44,5 +44,5 @@ yay -S todotxt
 # todo app in terminal 
 yay -S rstudio-desktop-bin 
 # rstudio desktop package 
-# yay -S zed-editor
-# new editor faster than vscode 
+yay -S pandoc-bin
+# pandoc use for jupyter notebook to export ipynb to pdf

@@ -26,6 +26,10 @@ sudo cp ~/.config/hypr/windowrules.conf ./home/harito/.config/hypr/windowrules.c
 ### Neofetch config 
 sudo cp -r ~/.config/neofetch ./home/harito/.config
 
+### User system service 
+sudo cp -r ~/.config/systemd ./home/harito/.config
+# Eg: defautl.service have ibus@.service, ...
+
 ### Keyboard enviroment setup
 sudo cp /etc/environment ./etc/environment
 # set keyboard environment when start - importance when setting ibus in Arch 
