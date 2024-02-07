@@ -3,8 +3,13 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+
+### Setup for ibus
 INPUT_METHOD=ibus
 GTK_IM_MODULE=ibus
 QT_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 
+### Setup for locale
+export LC_ALL=en_US.utf8
+export LANG=en_US.utf8

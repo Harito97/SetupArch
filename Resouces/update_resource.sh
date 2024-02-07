@@ -27,8 +27,7 @@ sudo cp ~/.config/hypr/windowrules.conf ./home/harito/.config/hypr/windowrules.c
 sudo cp -r ~/.config/neofetch ./home/harito/.config
 
 ### User system service 
-sudo cp -r ~/.config/systemd ./home/harito/.config
-# Eg: defautl.service have ibus@.service, ...
+# sudo cp -r ~/.config/systemd ./home/harito/.config
 
 ### Keyboard enviroment setup
 sudo cp /etc/environment ./etc/environment
@@ -55,12 +54,15 @@ sudo cp /etc/systemd/system/zookeeper.service ./etc/systemd/system/zookeeper.ser
 # service start zookeeper
 sudo cp /etc/systemd/system/kafka.service ./etc/systemd/system/kafka.service
 # service start kafka
+sudo cp /etc/systemd/system/ibus.service ./etc/systemd/system/ibus.service  # think to repair this since this have some error
+# service for ibus
 
 ### Guide for program install by taz, zip, ...
 sudo cp /mnt/DataK/Program/kafka/kafka_setup.txt ./mnt/DataK/Program/kafka/kafka_setup.txt
 sudo cp /mnt/DataK/Program/xampp/xampp_guide.txt ./mnt/DataK/Program/xampp/xampp_guide.txt
 sudo cp /mnt/DataK/Program/xampp/xampp_setup.txt ./mnt/DataK/Program/xampp/xampp_setup.txt
 # sudo cp /mnt/DataK/Program/black_hole_wallpaper.png ./mnt/DataK/Program/black_hole_wallpaper.png
+# sudo cp ~/.config/swww/Rose-Pine/logo_hyprland.png ./mnt/DataK/Program/logo_hyprland.png
 # sudo cp -rf /mnt/DataK/Program/icon/ ./mnt/DataK/Program/icon/
 
 

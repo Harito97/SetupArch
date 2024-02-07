@@ -6,11 +6,8 @@
 export PATH="$PATH:/home/harito/bin"
 
 # Export locale use for UTF-8
-export LC_ALL=en_US.UTF-8
-
-# Export variable env for Latex tools
-# export TEXMFDIST=/usr/share/texmf-dist
-# export TEXMFLOCAL=/usr/local/share/texmf:/usr/share/texmf
+# export LC_ALL=en_US.utf8
+# export LANG=en_US.utf8
 
 # Export Ibus for ArchLinux with Hyprland
 # export GTK_IM_MODULE=ibus
@@ -21,7 +18,7 @@ export LC_ALL=en_US.UTF-8
 # Export setup for GUI environment with Hyprland - configed in ~/.config/hypr/hyprland.conf
 
 ## Toolkit Backend Variables
-# export GDK_BACKEND=x11						# GTK: Use wayland if available, fall back to x11 if not.
+# export GDK_BACKEND=x11					# GTK: Use wayland if available, fall back to x11 if not.
 # export QT_QPA_PLATFORM="xcb"					# Tell Qt applications to use the Wayland backend, and fall back to x11 if Wayland is unavailable
 # export SDL_VIDEODRIVER=wayland				# Run SDL2 applications on Wayland. Remove or set to x11 if games that provide older versions of SDL cause compatibility issues
 # export CLUTTER_BACKEND=wayland				# Clutter package already has wayland enabled, this variable will force Clutter applications to try and use the Wayland backend
@@ -34,8 +31,7 @@ export LC_ALL=en_US.UTF-8
 ## Qt Variables
 # export QT_AUTO_SCREEN_SCALE_FACTOR=1			# (From the Qt documentation) enables automatic scaling, based on the monitor’s pixel density
 # export QT_WAYLAND_DISABLE_WINDOWDECORATION=1		# Disables window decorations on Qt applications
-# export QT_QPA_PLATFORMTHEME=qt5ct			# Tells Qt based applications to pick your theme from qt5ct, use with Kvantum.
-export QT_QPA_PLATFORMTHEME=qt5ct 
+export QT_QPA_PLATFORMTHEME=qt5ct			# Tells Qt based applications to pick your theme from qt5ct, use with Kvantum. 
 
 # ------------------------------------------------
 # After this is default setup - can custom if free
