@@ -142,7 +142,12 @@
 
         systemctl --user status [my_service].service
 
-# 
+# Install Waydroid - best way to run Android app on Linux 
+## Follow these config: https://wiki.archlinux.org/title/Waydroid
+    Step 1. Prepare more kernel packages -> for simple i use linux-zen package (don't need to rebuild or recompile the kernel)
+    $ sudo pacman -S linux-zen 
+
+    Step 2. 
 
 
 
