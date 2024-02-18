@@ -146,8 +146,42 @@
 ## Follow these config: https://wiki.archlinux.org/title/Waydroid
     Step 1. Prepare more kernel packages -> for simple i use linux-zen package (don't need to rebuild or recompile the kernel)
     $ sudo pacman -S linux-zen 
+    $ sudo pacman -S linux-zen-headers
+    <!-- resolving dependencies... -->
+    <!-- looking for conflicting packages... -->
+    <!-- Package (2)              New Version   Net Change  Download Size -->
+    <!-- extra/pahole             1:1.25-4        0.85 MiB       0.29 MiB -->
+    <!-- extra/linux-zen-headers  6.7.4.zen1-1  128.41 MiB      25.80 MiB -->
 
-    Step 2. 
+    Step 2. Install and setup
+    yay -S waydroid 
+    <!-- 
+    # AUR Explicit (1): waydroid-1.4.2-1
+    # AUR Dependency (3): python-gbinder-1.1.2-1, libgbinder-1.1.36-1, libglibutil-1.0.76-1
+    # Sync Dependency (2): lxc-1:5.0.3-1, dnsmasq-2.90-1
+    # Sync Make Dependency (2): python-setuptools-1:69.0.3-1, cython-3.0.8-1
+    # :: (1/4) Downloaded PKGBUILD: libgbinder
+    # :: (2/4) Downloaded PKGBUILD: libglibutil
+    # :: (3/4) Downloaded PKGBUILD: python-gbinder
+    # :: (4/4) Downloaded PKGBUILD: waydroid
+    #   4 libglibutil                      (Build Files Exist)
+    #   3 waydroid                         (Build Files Exist)
+    #   2 python-gbinder                   (Build Files Exist)
+    #   1 libgbinder                       (Build Files Exist)
+    reboot # nhớ trước đó phải chuyển boot sang kernel linux-zen (thường thì update lại grub thì sẽ có entry đổi boot rồi - nếu không thì tùy chỉnh lại grub) thay thế cho kernel cũ mặc định tối giản của Arch Linux 
+    sudo waydroid init
+    sudo systemctl start waydroid-container.service
+    waydroid session start
+
+    # Launch GUI:
+    # $ waydroid show-full-ui
+    # Launch shell:
+    # # waydroid shell
+    # Install an application:
+    # $ waydroid app install $path_to_apk
+    # Run an application:
+    # $ waydroid app launch $package_name # Can be retrieved with `waydroid app list` 
+    -->
 
 
 
