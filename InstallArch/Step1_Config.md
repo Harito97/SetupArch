@@ -183,5 +183,15 @@
     # $ waydroid app launch $package_name # Can be retrieved with `waydroid app list` 
     -->
 
+# Install R kernel for Jupyter to run R code in Jupyther (without Conda)
+    install.packages("languageserver") # run file R in vscode 
+    # Step 1. Install R. Use the R terminal (do not use R studio) to install R packages: 
+    install.packages(c("repr", "IRdisplay", "evaluate", "crayon", "pbdZMQ", "devtools", "uuid", "digest"))
+    install.packages("IRkernel")
+    # Step 2. Make Kernel available to Jupyter 
+    IRkernel::installspec(user = TRUE) # set false to install system-wide 
+    # Sau khi làm vậy sẽ code R trên Jupyter Notebook được.
+    # Tuy nhiên có thể lint lỗi cảnh báo rất ngớ nên làm như sau:
+    "r.lsp.diagnostics": false. Tức search R extension cài trên Vscode, LSP và bỏ diagnostics
 
-
+    

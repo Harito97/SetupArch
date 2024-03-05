@@ -1,0 +1,88 @@
+:: 87 packages to upgrade/install.
+87  core/cryptsetup                    2.7.0-1                -> 2.7.0-3
+86  core/device-mapper                 2.03.23-1              -> 2.03.23-3
+85  core/expat                         2.6.0-1                -> 2.6.1-1
+84  core/libelf                        0.190-2                -> 0.191-1
+83  core/libnghttp2                    1.59.0-2               -> 1.60.0-1
+82  core/linux                         6.7.6.arch1-1          -> 6.7.8.arch1-1
+81  core/lvm2                          2.03.23-1              -> 2.03.23-3
+80  core/mdadm                         4.2-2                  -> 4.3-2
+79  core/mkinitcpio                    37.3-1                 -> 38-4
+78  core/shadow                        4.14.5-1               -> 4.14.6-1
+77  core/systemd                       255.4-1                -> 255.4-2
+76  core/systemd-libs                  255.4-1                -> 255.4-2
+75  core/systemd-sysvcompat            255.4-1                -> 255.4-2
+74  core/util-linux                    2.39.3-1               -> 2.39.3-2
+73  core/util-linux-libs               2.39.3-1               -> 2.39.3-2
+72  extra/dunst                        1.9.2-1                -> 1.10.0-1
+71  extra/dvisvgm                      3.2-1                  -> 3.2.1-1
+70  extra/epiphany                     45.2-1                 -> 45.3-1
+69  extra/eza                          0.18.4-1               -> 0.18.5-1
+68  extra/firefox                      123.0-1                -> 123.0.1-1
+67  extra/gcr-4                        4.2.0-1                -> 4.2.1-1
+66  extra/gdb                          14.1-1                 -> 14.2-1
+65  extra/gdb-common                   14.1-1                 -> 14.2-1
+64  extra/glib-networking              1:2.78.0-1             -> 1:2.78.1-1
+63  extra/glslang                      14.0.0-1               -> 14.0.0-2
+62  extra/gnome-contacts               45.0-1                 -> 45.1-1
+61  extra/gnome-maps                   45.4-1                 -> 45.5-1
+60  extra/imath                        3.1.10-1               -> 3.1.11-1
+59  extra/libadwaita                   1:1.4.3-1              -> 1:1.4.4-1
+58  extra/libass                       0.17.1-2               -> 0.17.1-4
+57  extra/libblockdev                  3.1.0-1                -> 3.1.0-2
+56  extra/libblockdev-crypto           3.1.0-1                -> 3.1.0-2
+55  extra/libblockdev-fs               3.1.0-1                -> 3.1.0-2
+54  extra/libblockdev-loop             3.1.0-1                -> 3.1.0-2
+53  extra/libblockdev-mdraid           3.1.0-1                -> 3.1.0-2
+52  extra/libblockdev-nvme             3.1.0-1                -> 3.1.0-2
+51  extra/libblockdev-part             3.1.0-1                -> 3.1.0-2
+50  extra/libblockdev-swap             3.1.0-1                -> 3.1.0-2
+49  extra/libbsd                       0.12.0-1               -> 0.12.1-1
+48  extra/libdbusmenu-qt5              0.9.3+16.04.20160218-6 -> 0.9.3+16.04.20160218-7
+47  extra/libfontenc                   1.1.7-1                -> 1.1.8-1
+46  extra/libjxl                       0.10.0-1               -> 0.10.1-1
+45  extra/libnice                      0.1.21-2               -> 0.1.22-1
+44  extra/libopenmpt                   0.7.3-1                -> 0.7.4-1
+43  extra/libsrtp                      1:2.5.0-1              -> 1:2.6.0-1
+42  extra/libunibreak                  5.1-1                  -> 6.1-1
+41  extra/libxcb                       1.16-1                 -> 1.16.1-1
+40  extra/libxcursor                   1.2.1-3                -> 1.2.2-1
+39  extra/libxdmcp                     1.1.4-2                -> 1.1.5-1
+38  extra/linux-zen                    6.7.6.zen1-1           -> 6.7.8.zen1-1
+37  extra/linux-zen-headers            6.7.6.zen1-1           -> 6.7.8.zen1-1
+36  extra/mesa                         1:24.0.1-1             -> 1:24.0.2-1
+35  extra/npm                          10.4.0-2               -> 10.5.0-1
+34  extra/openjpeg2                    2.5.0-3                -> 2.5.2-1
+33  extra/opus                         1.4-1                  -> 1.5.1-1
+32  extra/orc                          0.4.37-1               -> 0.4.38-1
+31  extra/pahole                       1:1.25-4               -> 1:1.26-1
+30  extra/pango                        1:1.51.2-1             -> 1:1.52.0-1
+29  extra/pcsclite                     2.0.1-1                -> 2.0.3-1
+28  extra/pixman                       0.43.2-1               -> 0.43.4-1
+27  extra/protobuf                     25.2-1                 -> 25.3-1
+26  extra/python-dateutil              2.8.2-6                -> 2.9.0-1
+25  extra/r                            4.3.2-4                -> 4.3.3-2
+24  extra/re2                          1:20240201-1           -> 1:20240301-1
+23  extra/sane                         1.2.1-6                -> 1.3.0-1
+22  extra/sdbus-cpp                    1.4.0-1                -> 1.5.0-3
+21  extra/udisks2                      2.10.1-3               -> 2.10.1-4
+20  extra/xdg-desktop-portal-hyprland  1.3.1-4                -> 1.3.1-5
+19  extra/xorg-fonts-encodings         1.0.7-1                -> 1.1.0-1
+18  extra/xorg-mkfontscale             1.2.2-1                -> 1.2.3-1
+17  extra/xorg-xauth                   1.1.2-1                -> 1.1.3-1
+16  extra/zziplib                      0.13.72-2              -> 0.13.73-1
+15  aur/drawio-desktop-bin             23.0.2-1               -> 23.1.5-1
+14  aur/google-chrome                  121.0.6167.184-1       -> 122.0.6261.94-1
+13  aur/hyprland-git                   0.34.0.r96.504ebe1b-1  -> 0.35.0.r104.bc3f5b94-1
+12  aur/mongodb-bin                    7.0.5-1                -> 7.0.6-1
+11  aur/mongosh-bin                    2.1.4-1                -> 2.1.5-1
+10  aur/python-jdatetime               4.1.0-2                -> 4.1.1-1
+ 9  aur/sddm-git                       0.20.0.14.g132f105-1   -> 0.21.0.0.g63780fc-2
+ 8  aur/snapd                          2.61.1-1               -> 2.61.2-1
+ 7  aur/tgpt-bin                       2.7.0-1                -> 2.7.1-1
+ 6  aur/visual-studio-code-bin         1.86.2-1               -> 1.87.0-1
+ 5  aur/wlogout                        1.1.1-3                -> 1.2.1-1
+ 4  aur/wps-office                     11.1.0.11711-1         -> 11.1.0.11719-1
+ 3  aur/wps-office-mime                11.1.0.11711-1         -> 11.1.0.11719-1
+ 2  aur/wps-office-mui-zh-cn           11.1.0.11711-1         -> 11.1.0.11719-1
+ 1  aur/yay-bin                        12.2.0-1               -> 12.3.0-1
