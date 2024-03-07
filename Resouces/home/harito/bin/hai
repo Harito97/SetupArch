@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# Lấy chuỗi input
-input_string="$1"
-
-# Sử dụng tgpt command với provider fakeopen và model gpt-4
-tgpt --provider fakeopen --model "gpt-4" "$input_string"

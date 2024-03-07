@@ -50,12 +50,12 @@ sudo cp /etc/pacman.d/mirrorlist ./etc/pacman.d/mirrorlist
 # config mirror to download need package - some package don't have on other repository
 
 ### System service setup
-sudo cp /etc/systemd/system/zookeeper.service ./etc/systemd/system/zookeeper.service
-# service start zookeeper
-sudo cp /etc/systemd/system/kafka.service ./etc/systemd/system/kafka.service
-# service start kafka
-sudo cp /etc/systemd/system/ibus.service ./etc/systemd/system/ibus.service  # think to repair this since this have some error
-# service for ibus
+# sudo cp /etc/systemd/system/zookeeper.service ./etc/systemd/system/zookeeper.service
+# # service start zookeeper
+# sudo cp /etc/systemd/system/kafka.service ./etc/systemd/system/kafka.service
+# # service start kafka
+# sudo cp /etc/systemd/system/ibus.service ./etc/systemd/system/ibus.service  # think to repair this since this have some error
+# # service for ibus
 
 ### Guide for program install by taz, zip, ...
 sudo cp /mnt/DataK/Program/kafka/kafka_setup.txt ./mnt/DataK/Program/kafka/kafka_setup.txt

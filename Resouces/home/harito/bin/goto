@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Go to comamnd -> change directory fast with common directory work
+
+# Common directories to work
+DIR=/mnt/DataK
+LEARN=$DIR/Univer/UniSubject/_3th_year/_2nd_term
+WORK=$DIR/HaritoWork
+PROJECT=$DIR/Project
+BOOK=$DIR/Book
+
+# Function to quickly change to the specified directory
+goto() {
+    case "$1" in
+        "work")
+            cd "$WORK" || echo "Error: Unable to change directory to $WORK"
+            ;;
+        "learn")
+            cd "$LEARN" || echo "Error: Unable to change directory to $LEARN"
+            ;;
+        "project")
+            cd "$PROJECT" || echo "Error: Unable to change directory to $PROJECT"
+            ;;
+        "book")
+            cd "$BOOK" || echo "Error: Unable to change directory to $BOOK"
+            ;;
+        *)
+            echo "Invalid option. Usage: . goto [work|learn|project|book] or source goto [work|learn|project|book]"
+            ;;
+    esac
+}
+
+# Check if an argument is provided
+if [ $# -eq 0 ]; then
+    echo "Usage: . goto [work|learn|project|book] or source goto [work|learn|project|book]"
+else
+    goto "$1"
+fi
+
