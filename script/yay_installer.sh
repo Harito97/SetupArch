@@ -12,9 +12,25 @@ yay -S cpp-httplib
 
 yay -S google-chrome
 # the brower from google
-# yay -S mongodb-bin # deleted
+yay -S mongodb-bin 
 # setup mongodb on archlinux
 # setup mongodb and active it's service follow this guide: https://www.geeksforgeeks.org/how-to-install-mongodb-on-arch-based-linux-distributionsmanjaro/
+# ❯ sudo systemctl start mongodb
+# ❯ sudo systemctl status mongodb
+# ● mongodb.service - MongoDB Database Server
+#      Loaded: loaded (/usr/lib/systemd/system/mongodb.service; disabled; preset: disabled)
+#      Active: active (running) since Wed 2024-03-13 09:22:06 +07; 18s ago
+#        Docs: https://docs.mongodb.org/manual
+#    Main PID: 11038 (mongod)
+#      Memory: 176.1M (peak: 267.8M)
+#         CPU: 1.542s
+#      CGroup: /system.slice/mongodb.service
+#              └─11038 /usr/bin/mongod --config /etc/mongodb.conf
+
+# Mar 13 09:22:06 archlinux systemd[1]: Started MongoDB Database Server.
+# Mar 13 09:22:06 archlinux mongod[11038]: {"t":{"$date":"2024-03-13T02:22:06.824Z"},"s":"I",  "c":"CONTROL",  "id":7484500, "ctx":"main","msg":"Environment variable MONGODB_CONFIG_OV>
+# ❯ systemctl enable mongodb
+# Created symlink /etc/systemd/system/multi-user.target.wants/mongodb.service → /usr/lib/systemd/system/mongodb.service.
 
 yay -S wps-office
 # setup wps office
@@ -69,4 +85,4 @@ yay -S pandoc-bin
 # yay -S gpt4all-git # deleted
 # use LLM locally
 
-sudo pacman -Rns mongodb-bin tgpt-bin wtfutil-bin scratch3-bin gpt4all-git 
+sudo pacman -Rns tgpt-bin wtfutil-bin scratch3-bin gpt4all-git 
