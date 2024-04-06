@@ -1,0 +1,17 @@
+[Unit]
+Description=Start ibus service
+Documentation=man:ibus-daemon(1)
+
+[Service]
+Environment="DISPLAY=%I"
+ExecStart=/usr/bin/ibus-daemon --replace --xim --panel disable
+ExecReload=/usr/bin/ibus restart
+ExecStop=/usr/bin/ibus exit
+
+[Install]
+WantedBy=default.target
+
+# To change to Bamboo -> mainMod + enter
+# To change to English mod -> mainMod + enter (again)
+# To do this: config in ~/.config/hypr/keyblindings.conf have 
+# bind = $mainMod, return, exec, ibus engine Bamboo

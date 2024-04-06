@@ -27,7 +27,9 @@ sudo cp ~/.config/hypr/windowrules.conf ./home/harito/.config/hypr/windowrules.c
 sudo cp -r ~/.config/neofetch ./home/harito/.config
 
 ### User system service 
-# sudo cp -r ~/.config/systemd ./home/harito/.config
+sudo cp -r ~/.config/systemd ./home/harito/.config
+# step1. create a service_name.service (with correct form)
+# step2. to start service when login user account -> use: systemctl --user enable service_name && systemctl start service_name
 
 ### Keyboard enviroment setup
 sudo cp /etc/environment ./etc/environment

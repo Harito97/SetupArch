@@ -23,6 +23,9 @@
 # How to login with remote terminal only (disable display-manager service)
     sudo systemctl disable display-manager
     Removed "/etc/systemd/system/display-manager.service".
+    sudo systemctl disable sddm
+
+    To enable it again: use 'sudo systemctl enable sddm' - replace sddm with what ever display-manager you use (eg: lightdm, sddm, gdm, gdm3, ...)
 
 # How to auto start a command or script when login
     # add script to /etc/profile.d
