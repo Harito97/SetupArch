@@ -127,3 +127,4 @@ waydroid session start
 # $ waydroid app launch $package_name # Can be retrieved with `waydroid app list`
 
 ### Done setup for Waydroid 
+sudo pacman -S evtest # trình quản lý các thiết bị ngoại vi (bàn phím, chuột, ...)
