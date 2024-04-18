@@ -197,4 +197,8 @@
     # Tuy nhiên có thể lint lỗi cảnh báo rất ngớ nên làm như sau:
     "r.lsp.diagnostics": false. Tức search R extension cài trên Vscode, LSP và bỏ diagnostics
 
-    
+# Convert multi images to 1 pdf
+    Use convert image1 image2 image3 pdf_file
+
+# Convert docx to pdf 
+    Use unoconv docx_file

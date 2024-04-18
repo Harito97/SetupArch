@@ -128,3 +128,4 @@ waydroid session start
 
 ### Done setup for Waydroid 
 sudo pacman -S evtest # trình quản lý các thiết bị ngoại vi (bàn phím, chuột, ...)
+sudo pacman -S unoconv # convert các loại file hỗ trợ bởi LibreOffice/OpenOffice
