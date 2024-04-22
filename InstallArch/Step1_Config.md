@@ -202,3 +202,8 @@
 
 # Convert docx to pdf 
     Use unoconv docx_file
+
+# Download facebook video 
+    Use yt-dlp -o 'HowToDayHoc.mp4' 'https://fb.watch/rAT7fDxaHY/'  
+    Or yt-dlp --cookies-from-browser firefox -o 'HowToDayHoc.mp4' 'https://fb.watch/rAT7fDxaHY/'  
+    

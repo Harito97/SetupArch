@@ -129,3 +129,5 @@ waydroid session start
 ### Done setup for Waydroid 
 sudo pacman -S evtest # trình quản lý các thiết bị ngoại vi (bàn phím, chuột, ...)
 sudo pacman -S unoconv # convert các loại file hỗ trợ bởi LibreOffice/OpenOffice
+sudo pacman -S kdeconnect # connect to phone
+sudo pacman -S texlive-latex # contains essential LaTeX packages. (For instance, if you intend to use pdflatex, then you need this package).

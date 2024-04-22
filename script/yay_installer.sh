@@ -88,3 +88,4 @@ yay -S pandoc-bin
 sudo pacman -Rns tgpt-bin wtfutil-bin scratch3-bin gpt4all-git 
 
 yay -S microsoft-edge-stable-bin
+yay -S zoom
