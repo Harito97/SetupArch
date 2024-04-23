@@ -89,3 +89,5 @@ sudo pacman -Rns tgpt-bin wtfutil-bin scratch3-bin gpt4all-git
 
 yay -S microsoft-edge-stable-bin
 yay -S zoom
+yay -S wine-wow64
+# ref: https://wiki.archlinux.org/title/Official_repositories#multilib and https://wiki.archlinux.org/title/wine
