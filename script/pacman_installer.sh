@@ -36,6 +36,8 @@ sudo pacman -S libreoffice-fresh
 # office app for Linux 
 sudo pacman -S tk
 # set python use tk 
+sudo pacman -S python-pip
+# install pip
 
 ### After this is set up macOS on Linux: more infor in https://github.com/sickcodes/Docker-OSX?tab=readme-ov-file#initial-setup
 # sudo pacman -S qemu libvirt dnsmasq virt-manager bridge-utils flex bison iptables-nft edk2-ovmf

@@ -91,3 +91,7 @@ yay -S microsoft-edge-stable-bin
 yay -S zoom
 yay -S wine-wow64
 # ref: https://wiki.archlinux.org/title/Official_repositories#multilib and https://wiki.archlinux.org/title/wine
+
+yay -S espeak 
+yay -S python-pyaudio
+yay -S python311 

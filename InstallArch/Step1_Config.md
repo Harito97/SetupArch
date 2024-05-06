@@ -207,3 +207,112 @@
     Use yt-dlp -o 'HowToDayHoc.mp4' 'https://fb.watch/rAT7fDxaHY/'  
     Or yt-dlp --cookies-from-browser firefox -o 'HowToDayHoc.mp4' 'https://fb.watch/rAT7fDxaHY/'  
     
+# Disable internal keyboard base on USB status (has extended keyboard or not)
+    ❯ sudo nano /etc/udev/rules.d/10-usb-keyboard.rules
+
+    ❯ sudo nano /usr/local/bin/keyboard.sh
+
+    ❯ sudo chmod +x /usr/local/bin/keyboard.sh
+
+    ❯ sudo nano /etc/systemd/system/keyboard.service
+
+    ❯ sudo systemctl enable keyboard.service
+
+    Created symlink /etc/systemd/system/multi-user.target.wants/keyboard.service → /etc/systemd/system/keyboard.service.
+
+    More detail:
+    Để tự động tắt bàn phím gắn liền với laptop khi không có bàn phím rời được cắm vào và tự động kích hoạt lại bàn phím gắn liền khi có bàn phím rời được cắm vào, bạn có thể sử dụng một số script và cơ chế kiểm soát sự kiện của hệ điều hành Linux. Dưới đây là một ví dụ về cách thực hiện điều này bằng cách sử dụng `udev` và `systemd`.
+
+    1. **Tạo một rule `udev` để theo dõi sự kiện khi một thiết bị USB được cắm hoặc rút:**
+
+       Tạo một file rule `udev` bằng lệnh sau:
+
+       ```bash
+       sudo nano /etc/udev/rules.d/10-usb-keyboard.rules
+       ```
+
+       Trong file này, thêm dòng sau:
+
+       ```plaintext
+       ACTION=="add", SUBSYSTEM=="usb", ENV{ID_MODEL_ID}=="
+
+    Tạo một file rule `udev` bằng lệnh sau:
+
+    ```bash
+    sudo nano /etc/udev/rules.d/10-usb-keyboard.rules
+    ```
+
+    Trong file này, thêm dòng sau:
+
+    ```plaintext
+    ACTION=="add", SUBSYSTEM=="usb", ENV{ID_MODEL_ID}=="*", RUN+="/bin/bash -c '/bin/sleep 1 && /usr/local/bin/keyboard.sh enable'"
+    ACTION=="remove", SUBSYSTEM=="usb", ENV{ID_MODEL_ID}=="*", RUN+="/usr/local/bin/keyboard.sh disable"
+    ```
+
+    2. **Tạo một script để kích hoạt hoặc tắt bàn phím gắn liền với laptop:**
+
+       Tạo một file script với tên `keyboard.sh` trong `/usr/local/bin/`:
+
+       ```bash
+       sudo nano /usr/local/bin/keyboard.sh
+       ```
+
+       Trong file này, thêm nội dung sau:
+
+       ```bash
+       #!/bin/bash
+
+       internal_keyboard_id=$(xinput list | grep "AT Translated Set 2 keyboard" | grep -oP 'id=\K\d+')
+
+       if [ "$1" == "enable" ]; then
+           xinput reattach "$internal_keyboard_id" 3
+       elif [ "$1" == "disable" ]; then
+           xinput float "$internal_keyboard_id"
+       fi
+       ```
+
+       Đảm bảo script có quyền thực thi bằng cách chạy:
+
+       ```bash
+       sudo chmod +x /usr/local/bin/keyboard.sh
+       ```
+
+    3. **Tạo một systemd service để chạy script khi hệ thống khởi động:**
+
+       Tạo một file service:
+
+       ```bash
+       sudo nano /etc/systemd/system/keyboard.service
+       ```
+
+       Thêm nội dung sau vào file:
+
+       ```plaintext
+        [Unit]
+        Description=Enable/disable internal keyboard based on USB keyboard attachment
+        After=multi-user.target
+
+        [Service]
+        Type=oneshot
+        ExecStart=/bin/bash -c '/bin/sleep 5 && /usr/local/bin/keyboard.sh enable'
+        ExecStop=/usr/local/bin/keyboard.sh disable
+        RemainAfterExit=true
+
+        [Install]
+        WantedBy=multi-user.target
+       ```
+
+    4. **Enable service:**
+
+       ```bash
+       sudo systemctl enable keyboard.service
+       ```
+
+    Sau khi thực hiện các bước trên, bàn phím gắn liền với laptop sẽ tự động bị vô hiệu hóa khi bạn cắm một bàn phím USB vào và sẽ được kích hoạt lại khi bạn rút bàn phím USB ra.
+
+# Setup R run in Jupyter Notebook
+    In R shell install:
+    install.packages('IRkernel')
+    IRkernel::installspec()  # to register the kernel in the current R installation
+    # remember can install in local user only in /home/user/R...
+    
