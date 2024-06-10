@@ -94,4 +94,4 @@ yay -S wine-wow64
 
 yay -S espeak 
 yay -S python-pyaudio
-yay -S python311 
+yay -S python311
