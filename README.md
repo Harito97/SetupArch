@@ -21,6 +21,7 @@ I set up my Arch Linux with the following principles in mind: Fast, Stable, Cust
 |___ Resources/
 |
 |___ script/
+|
 |___ install
 ```
 
