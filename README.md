@@ -11,6 +11,8 @@ I set up my Arch Linux with the following principles in mind: Fast, Stable, Cust
 |___ config_arch/
 |     |___ core_config.ipynb      # Way I found to solve the core problem
 |     |___ app_config.ipynb       # Way I found to solve the app problem
+|___ current_problem/
+|     
 |___ forward_slash/               # Recover config setup
       |___ home/...
       |___ etc/...
