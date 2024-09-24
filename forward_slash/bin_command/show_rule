@@ -1,0 +1,3 @@
+# display /Data/Rule.jpg
+# eog --fullscreen /Data/Rule.png
+eog --fullscreen /Data/Projects/SetupArch/forward_slash/Data/Resources/Rule_2024_09_24.png
