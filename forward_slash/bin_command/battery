@@ -1,0 +1,100 @@
+#!/bin/bash
+
+# Kiểm tra nếu không có tham số đầu vào
+if [ $# -ne 1 ]; then
+    echo "Sử dụng: $0 <mode>"
+    echo "  mode: 0 - siêu tiết kiệm điện"
+    echo "        1 - bình thường"
+    echo "        2 - hiệu suất cao"
+    exit 1
+fi
+
+# Kiểm tra tham số đầu vào
+MODE=$1
+
+# Thực hiện theo từng chế độ
+case $MODE in
+    0)
+        echo "Chuyển sang chế độ siêu tiết kiệm điện..."
+
+        # Giới hạn sạc pin ở mức 50%-60% để bảo vệ pin
+        # sudo tlp setcharge 80 BAT0    
+        # LENOVO only support a threshold to stop charging or charging again (currently 80%)
+        
+        sudo tlp ac --conservative
+        sudo tlp bat --conservative
+        
+        # Giảm xung nhịp CPU (không sử dụng hiệu suất tối đa)
+        echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo > /dev/null
+        
+        # Giới hạn số lượng CPU core hoạt động tối đa
+        sudo cpufreq-set -r -g powersave
+        
+        # Giảm mức độ sáng màn hình
+        sudo xbacklight -set 50
+        
+        # Tắt kết nối Bluetooth để tiết kiệm năng lượng
+        sudo rfkill block bluetooth
+        
+        # Giảm năng lượng tiêu thụ của card mạng không dây
+        sudo iw dev wlan0 set power_save on
+        
+        # Tắt card đồ họa rời (nếu có)
+        sudo prime-select intel
+        
+        # Tắt các thiết bị ngoại vi không cần thiết
+        sudo tlp usbautosuspend=1
+
+        # Tối ưu thời gian sleep của ổ cứng (HDD)
+        sudo hdparm -B 1 /dev/sda
+        
+        # Tắt cổng kết nối không dùng đến (USB autosuspend)
+        sudo tlp usb_autosuspend=1
+
+        # Giảm tốc độ quạt (nếu hỗ trợ)
+        # sudo sensors-detect --auto
+        # sudo pwmconfig && sudo fancontrol
+        
+        # Khởi động lại TLP để áp dụng cấu hình mới
+        sudo tlp start
+        ;;
+    1)
+        echo "Chuyển sang chế độ bình thường..."
+        sudo tlp ac 1                          # Sử dụng các tính năng cân bằng khi dùng nguồn AC
+        sudo tlp bat 0                         # Tắt chế độ tiết kiệm pin tối đa
+        sudo tlp ac --balanced
+        sudo tlp bat --balanced
+        echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo > /dev/null
+        sudo cpufreq-set -r -g ondemand
+        sudo xbacklight -set 70
+        sudo rfkill unblock bluetooth
+        sudo iw dev wlan0 set power_save off
+        sudo prime-select nvidia
+        sudo tlp usbautosuspend=0
+        sudo hdparm -B 128 /dev/sda
+        sudo tlp start                         # Khởi động lại tlp để áp dụng cài đặt
+        ;;
+    2)
+        echo "Chuyển sang chế độ hiệu suất cao..."
+        sudo tlp ac 1                          # Bật tất cả tính năng hiệu suất cao khi dùng nguồn AC
+        sudo tlp bat 0                         # Tắt chế độ tiết kiệm năng lượng
+        sudo tlp ac --performance
+        sudo tlp bat --performance
+        echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo > /dev/null
+        sudo cpufreq-set -r -g performance
+        sudo xbacklight -set 100
+        sudo rfkill unblock bluetooth
+        sudo iw dev wlan0 set power_save off
+        sudo prime-select nvidia
+        sudo tlp usbautosuspend=0
+        sudo hdparm -B 254 /dev/sda
+        sudo tlp start                         # Khởi động lại tlp để áp dụng cài đặt
+        ;;
+    *)
+        echo "Giá trị mode không hợp lệ. Vui lòng chọn 0, 1, hoặc 2."
+        exit 1
+        ;;
+esac
+
+echo "Cấu hình TLP đã được áp dụng thành công!"
+exit 0
