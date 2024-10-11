@@ -1,0 +1,128 @@
+#!/bin/bash
+
+# Hàm hiển thị menu
+show_menu() {
+    echo "======================="
+    echo "    Docker Manager"
+    echo "======================="
+    echo "1) Khởi động Docker"
+    echo "2) Tắt Docker"
+    echo "3) Khởi động tất cả containers"
+    echo "4) Tắt tất cả containers"
+    echo "5) Liệt kê images"
+    echo "6) Liệt kê containers"
+    echo "7) Chọn container để khởi động"
+    echo "8) Chọn container để tắt"
+    echo "9) Mount thư mục vào container"
+    echo "10) Thoát"
+    echo "======================="
+}
+
+# Hàm khởi động Docker
+start_docker() {
+    echo "Đang khởi động Docker..."
+    sudo systemctl start docker
+    echo "Docker đã được khởi động."
+}
+
+# Hàm tắt Docker
+stop_docker() {
+    echo "Đang tắt Docker..."
+    sudo systemctl stop docker
+    echo "Docker đã được tắt."
+}
+
+# Hàm khởi động tất cả containers
+start_all_containers() {
+    echo "Đang khởi động tất cả containers..."
+    sudo docker start $(sudo docker ps -aq)
+    echo "Tất cả containers đã được khởi động."
+}
+
+# Hàm tắt tất cả containers
+stop_all_containers() {
+    echo "Đang tắt tất cả containers..."
+    sudo docker stop $(sudo docker ps -aq)
+    echo "Tất cả containers đã được tắt."
+}
+
+# Hàm liệt kê images
+list_images() {
+    echo "Danh sách images:"
+    sudo docker images
+}
+
+# Hàm liệt kê containers
+list_containers() {
+    echo "Danh sách containers:"
+    sudo docker ps -a
+}
+
+# Hàm khởi động container
+start_container() {
+    echo "Nhập tên hoặc ID của container muốn khởi động:"
+    read container_name
+    echo "Đang khởi động container $container_name..."
+    sudo docker start "$container_name"
+}
+
+# Hàm tắt container
+stop_container() {
+    echo "Nhập tên hoặc ID của container muốn tắt:"
+    read container_name
+    echo "Đang tắt container $container_name..."
+    sudo docker stop "$container_name"
+}
+
+# Hàm mount thư mục vào container
+mount_directory() {
+    echo "Nhập tên hoặc ID của container:"
+    read container_name
+    echo "Nhập đường dẫn thư mục trên hệ thống của bạn muốn mount:"
+    read host_directory
+    echo "Đang mount $host_directory vào container $container_name..."
+    sudo docker run -v "$host_directory:/mnt" -it "$container_name" bash
+}
+
+# Vòng lặp chính
+while true; do
+    show_menu
+    read -p "Chọn một tùy chọn [1-10]: " choice
+
+    case $choice in
+        1)
+            start_docker
+            ;;
+        2)
+            stop_docker
+            ;;
+        3)
+            start_all_containers
+            ;;
+        4)
+            stop_all_containers
+            ;;
+        5)
+            list_images
+            ;;
+        6)
+            list_containers
+            ;;
+        7)
+            start_container
+            ;;
+        8)
+            stop_container
+            ;;
+        9)
+            mount_directory
+            ;;
+        10)
+            echo "Thoát khỏi chương trình."
+            exit 0
+            ;;
+        *)
+            echo "Lựa chọn không hợp lệ. Vui lòng chọn lại."
+            ;;
+    esac
+done
