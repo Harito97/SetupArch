@@ -1,0 +1,72 @@
+#!/bin/bash
+
+# Define paths
+## Main project
+MAIN_PROJECT='/Data/Projects/Research_ThyroidFNA_ClassAI'
+MAIN_TEACH='/Data/HaritoWork/Tutorial_PyScrat/Python'
+
+## Group path
+PROJECT_PATH='/Data/Projects'
+TUTORIAL_PATH='/Data/Tutorial'
+TEACHING_PATH='/Data/HaritoWork'
+
+## Bin path make command
+CUSTOM_BIN_PATH='/Data/Projects/SetupArch/forward_slash/bin_command'
+
+# Function to navigate to a directory
+navigate_to_directory() {
+    local directory=$1
+    builtin cd "$directory" || {
+        echo "Cannot navigate to directory: $directory"
+        return 1
+    }
+    echo "Navigated to: $directory"
+}
+
+# Help function
+show_help() {
+    echo "Sử dụng:"
+    echo "  $0 [1-6]"
+    echo "Các tùy chọn:"
+    echo "  1 - Main Project"
+    echo "  2 - Main Teaching"
+    echo "  3 - Project Path"
+    echo "  4 - Tutorial Path"
+    echo "  5 - Teaching Path"
+    echo "  6 - Custom Bin Path"
+    echo "  help - Hiển thị trợ giúp"
+    echo "Ví dụ:"
+    echo "  $0 3"
+}
+
+# Main function
+# if [ "$1" eq "help" ]; then
+#    show_help
+#    exit 0
+# fi
+
+case $1 in
+    1)
+        navigate_to_directory "$MAIN_PROJECT"
+        ;;
+    2)
+        navigate_to_directory "$MAIN_TEACH"
+        ;;
+    3)
+        navigate_to_directory "$PROJECT_PATH"
+        ;;
+    4)
+        navigate_to_directory "$TUTORIAL_PATH"
+        ;;
+    5)
+        navigate_to_directory "$TEACHING_PATH"
+        ;;
+    6)
+        navigate_to_directory "$CUSTOM_BIN_PATH"
+        ;;
+    *)
+        echo "Lựa chọn không hợp lệ." # Vui lòng thử lại hoặc gõ '$0 help' để biết thêm thông tin."
+        # exit 1
+        show_help
+        ;;
+esac

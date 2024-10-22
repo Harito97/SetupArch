@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Function to show help
+show_help() {
+    echo "Usage: '. $0 <virtual_environment_number>'"
+    echo "Example: '. $0 1' or 'source $0 1'"
+    echo "Available virtual environments:"
+    echo "1: ai_work#311"
+    echo "2: financial#311"
+    echo "3: vten_work#311"
+    exit 0
+}
+
+# This script is used to switch between python virtual environments
+# Base dir for all virtual environments
+VIRTUALENV_BASE_DIR="/Data/Projects/venv_manager"
+
+vir_env=$1
+case $vir_env in
+    1)
+        VIRTUALENV_NAME="ai_work#311"
+        ;;
+    2)
+        VIRTUALENV_NAME="financial#311"
+        ;;
+    3)
+        VIRTUALENV_NAME="vten_work#311"
+        ;;
+    "help")
+        show_help
+        exit 0
+        ;;
+    *)
+        echo "Invalid virtual environment. Use $0 help to see the list of available virtual environments."
+        VIRTUALENV_NAME="None"
+        exit 1
+        ;;
+esac
+
+# Check if the virtual environment exists
+if [ ! -d $VIRTUALENV_BASE_DIR/$VIRTUALENV_NAME ]; then
+    echo "Virtual environment $VIRTUALENV_NAME for $vir_env"
+    exit 1
+fi
+
+# Activate the selected virtual environment
+source $VIRTUALENV_BASE_DIR/$VIRTUALENV_NAME/bin/activate
+echo "Activated virtual environment $VIRTUALENV_NAME for $vir_env"

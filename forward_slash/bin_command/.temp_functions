@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Hàm để di chuyển đến thư mục
+change_directory() {
+    dir=$(dialog --title "Chọn thư mục" --inputbox "Nhập đường dẫn thư mục:" 8 40 3>&1 1>&2 2>&3 3>&-)
+    if [ $? -eq 0 ]; then
+        cd "$dir" || dialog --msgbox "Không thể di chuyển đến thư mục." 5 40
+    fi
+}
+
+# Hàm để xem ngày tháng
+show_date() {
+    current_date=$(date +"%Y-%m-%d %H:%M:%S")
+    dialog --title "Ngày tháng hiện tại" --msgbox "Ngày tháng hiện tại: $current_date" 6 40
+}
+
+# Hàm để xem lịch
+show_calendar() {
+    dialog --title "Lịch tháng" --textbox <(cal) 20 50
+}
+
+# Menu chính
+while true; do
+    choice=$(dialog --title "Menu chính" --menu "Chọn một chức năng" 15 50 3 \
+    1 "Di chuyển đến thư mục" \
+    2 "Xem ngày tháng" \
+    3 "Xem lịch" \
+    4 "Thoát" 3>&1 1>&2 2>&3 3>&-)
+
+    case $? in
+        0)  # Người dùng chọn một tùy chọn
+            case $choice in
+                1) change_directory ;;
+                2) show_date ;;
+                3) show_calendar ;;
+                4) break ;;  # Thoát
+            esac ;;
+        1)  # Người dùng nhấn Esc
+            break ;;
+    esac
+done
+
+# Kết thúc
+dialog --title "Thoát" --msgbox "Cảm ơn bạn đã sử dụng ứng dụng!" 6 40
+clear
