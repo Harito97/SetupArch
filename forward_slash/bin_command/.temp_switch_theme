@@ -1,0 +1,65 @@
+# Use
+# Window + Shift + T: to select themes
+# Window + Shift + W: to select wallpaper
+
+# #########
+
+#!/bin/bash
+
+# Function show help
+show_help() {
+    echo 'Theme Switcher:: [l: light|d: dark]'
+    exit 0
+}
+
+hyprctl reload
+
+theme=$1
+
+# Theme light 1
+if [[ $theme == "l1" ]]; then
+    gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-grey'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Catppuccin-Latte'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    exit 0
+fi
+
+# Theme light 2
+if [[ $theme == "l2" ]]; then
+    gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-black'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Material-Sakura'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    exit 0
+fi
+
+# Theme light 3
+if [[ $theme == "l3" ]]; then
+    exec = gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-blue'
+    exec = gsettings set org.gnome.desktop.interface gtk-theme 'Frosted-Glass'
+    exec = gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+    exit 0
+fi
+
+# Theme dark 1
+if [[ $theme == "d1" ]]; then
+    gsettings set org.gnome.desktop.interface icon-theme 'Tela-circle-grey'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Graphite-Mono'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    exit 0
+fi
+
+# Theme dark 2
+if [[ $theme == "d2" ]]; then
+    gsettings set org.gnome.desktop.interface icon-theme 'Nordzy'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-Blue'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    exit 0
+fi
+
+# Theme dark 3
+if [[ $theme == "d3" ]]; then
+    gsettings set org.gnome.desktop.interface icon-theme 'Gruvbox-Plus-Dark'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Retro'
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    exit 0
+fi
