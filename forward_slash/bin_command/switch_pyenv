@@ -28,12 +28,10 @@ case $vir_env in
         ;;
     "help")
         show_help
-        exit 0
         ;;
     *)
         echo "Invalid virtual environment. Use $0 help to see the list of available virtual environments."
         VIRTUALENV_NAME="None"
-        exit 1
         ;;
 esac
 
