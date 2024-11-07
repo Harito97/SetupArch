@@ -8,6 +8,7 @@ show_help() {
     echo "1: ai_work#311"
     echo "2: financial#311"
     echo "3: vten_work#311"
+    echo "4: medical#311"
     exit 0
 }
 
@@ -25,6 +26,9 @@ case $vir_env in
         ;;
     3)
         VIRTUALENV_NAME="vten_work#311"
+        ;;
+    4)
+        VIRTUALENV_NAME="medical#311"
         ;;
     "help")
         show_help
